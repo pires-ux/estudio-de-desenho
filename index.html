@@ -1,4 +1,8 @@
 <!doctype html>
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
@@ -96,8 +100,10 @@
     </div>
     <div class="status"><span id="statusText">Pronto</span><span>Ferramenta: <span id="toolName">Pincel</span></span></div>
   </div>
-
-<script>
+{children}
+        <SpeedInsights /> {/* Coloque aqui, dentro do body, mas como componente React */}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781002268712149"
+     crossorigin="anonymous">
 /* ====== Variáveis ====== */
 const gridCanvas = document.getElementById('gridCanvas');
 const drawCanvas = document.getElementById('drawCanvas');
@@ -183,3 +189,5 @@ saveHistory();
 </script>
 </body>
 </html>
+  );
+}
