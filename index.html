@@ -1,10 +1,7 @@
 <!doctype html>
-import { SpeedInsights } from "@vercel/speed-insights/next";
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
 <html lang="pt-BR">
 <head>
+
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
 <title>Studio de Desenho</title>
@@ -50,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 </style>
 </head>
 <body>
+      
   <div class="app">
     <header>
       <h1>Studio de Desenho</h1>
@@ -100,8 +98,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </div>
     <div class="status"><span id="statusText">Pronto</span><span>Ferramenta: <span id="toolName">Pincel</span></span></div>
   </div>
-{children}
-        <SpeedInsights /> {/* Coloque aqui, dentro do body, mas como componente React */}
+      
+  
+
+
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5781002268712149"
      crossorigin="anonymous">
 /* ====== Variáveis ====== */
@@ -189,5 +189,3 @@ saveHistory();
 </script>
 </body>
 </html>
-  );
-}
